@@ -8,7 +8,7 @@ int main() {
 
     int i; 
 
-    printf("=== Desafio MateCheck - Movimentação das Peças ===\n\n");
+    printf("=== Desafio MateCheck - Movimentação das Peças ===\n");
 
     printf(" Movimentação do Bispo (5 casas na diagonal superior direita):\n");
     for (i = 1; i <= casasBispo; i++) {
@@ -35,7 +35,22 @@ int main() {
         i++;
     } while (i <= casasRainha);
 
-    printf("\n Fim do desafio MateCheck!\n");
+     printf("Movimentação do Cavalo \n");
+    int movimentosVerticais = 2;
+    int movimentosHorizontais = 1;
+
+    for (int vert = 1; vert <= movimentosVerticais; vert++) {
+        printf("Movimento vertical %d: Baixo\n", vert);
+
+        int hor = 1;
+        do {
+            printf("  Movimento horizontal %d: Esquerda\n", hor);
+            hor++;
+        } while (hor <= movimentosHorizontais);
+
+    }
+
+    printf("\n O cavalo completou sua movimentação em L!\n");
 
     return 0;
 }
